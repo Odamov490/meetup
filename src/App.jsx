@@ -13,6 +13,7 @@ import Chat from './pages/Chat';
 import Admin from './pages/Admin';
 import { Spinner } from './components/UI';
 
+
 function ProtectedRoute({ children, adminOnly }) {
   const { currentUser, userProfile, authLoading } = useApp();
   if (authLoading) return <Spinner />;
@@ -50,6 +51,9 @@ function AppRoutes() {
         <Route path="/chat/:groupId" element={<ProtectedRoute><Chat /></ProtectedRoute>} />
         <Route path="/admin" element={<ProtectedRoute adminOnly><Admin /></ProtectedRoute>} />
         <Route path="*" element={<Navigate to="/" replace />} />
+        
+
+
       </Routes>
       <Toast />
     </>
