@@ -21,3 +21,4 @@ Firestore → users → o'z hujjatingiz → role: "admin"
 - Guruhlar: yaratish, qo'shilish, chat
 - Tadbirlar: yaratish, qatnashish
 - Admin panel: users, groups, events, reports
+"# meetup" 
