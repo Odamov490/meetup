@@ -1,8 +1,8 @@
-// O'z Firebase loyihangiz ma'lumotlarini shu yerga kiriting
-// https://console.firebase.google.com → Project Settings → Web app
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 // Firebase konfiguratsiyasi
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyCkjaxRC2q3V1y58OvraEce9aDC_ptcLuE",
   authDomain: "meetup-d67f6.firebaseapp.com",
   projectId: "meetup-d67f6",
@@ -11,3 +11,6 @@ export const firebaseConfig = {
   appId: "1:942720343437:web:12d42e1360b65eaa23b1c4",
   measurementId: "G-FNK8X9T5JC"
 };
+
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
